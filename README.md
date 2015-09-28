@@ -10,7 +10,7 @@ Install the plugin:
 npm install --save-dev babel-plugin-react-html-attrs
 ```
 
-Then edit your .babelrc to include `react-html-attrs`:
+Then edit your `.babelrc` to include `react-html-attrs`:
 
 ```json
 {
