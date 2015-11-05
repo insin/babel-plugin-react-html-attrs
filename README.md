@@ -7,7 +7,11 @@ Transforms JSX `class` attributes into `className` and `for` attributes into `ht
 Install the plugin:
 
 ```
+# For Babel 6
 npm install --save-dev babel-plugin-react-html-attrs
+
+# For Babel 5
+npm install --save-dev babel-plugin-react-html-attrs@1.0.0
 ```
 
 Then edit your `.babelrc` to include `react-html-attrs`:
