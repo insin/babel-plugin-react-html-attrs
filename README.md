@@ -24,6 +24,16 @@ Then edit your `.babelrc` to include `react-html-attrs`:
 }
 ```
 
+## ESLint Configuration
+
+If you're using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)'s' [`no-unknown-property` rule](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md), as of v5.2.0 you can configure it to ignore usage of `class` and `for` in your JSX like so:
+
+```json
+{
+  "react/no-unknown-property": [2, {"ignore": ["class", "for"]}]
+}
+```
+
 ## Caveats
 
 Read [facebook/react#4433](https://github.com/facebook/react/issues/4433) for the reasoning behind why React treats these attributes the way it does and the potential gotchas which await you if you use this plugin (an old version of the JSX transformer used to perform this transformation).
