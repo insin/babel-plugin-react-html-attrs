@@ -1,5 +1,8 @@
 # babel-plugin-react-html-attrs
 
+[![Travis][travis-badge]][travis]
+[![npm package][npm-badge]][npm]
+
 Transforms JSX `class` attributes into `className` and `for` attributes into `htmlFor`, allowing you to copy and paste HTML into your React components without having to manually edit these particular attributes each time.
 
 ## Installation & Usage
@@ -45,3 +48,9 @@ It's fairly common to access a `className` prop in user-defined components, and 
 Testing setup cloned from [gaearon/babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform).
 
 ## MIT Licensed
+
+[travis-badge]: https://img.shields.io/travis/insin/babel-plugin-react-html-attrs/master.png?style=flat-square
+[travis]: https://travis-ci.org/insin/babel-plugin-react-html-attrs
+
+[npm-badge]: https://img.shields.io/npm/v/babel-plugin-react-html-attrs.png?style=flat-square
+[npm]: https://www.npmjs.org/package/babel-plugin-react-html-attrs
