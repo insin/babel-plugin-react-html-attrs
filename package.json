@@ -7,9 +7,9 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "babel-core": "^6.0.15",
-    "babel-preset-react": "^6.0.15",
-    "mocha": "^2.3.3"
+    "babel-core": "^6.9.1",
+    "babel-preset-react": "^6.5.0",
+    "mocha": "^2.5.3"
   },
   "license": "MIT",
   "repository": {

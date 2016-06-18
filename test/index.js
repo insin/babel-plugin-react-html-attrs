@@ -9,6 +9,7 @@ function trim(str) {
 }
 
 describe('Transforms "class" and "for" JSX attributes', function() {
+  this.timeout(10000)
   var fixturesDir = path.join(__dirname, 'fixtures')
   fs.readdirSync(fixturesDir).map(function(caseName) {
     it(caseName, function() {
