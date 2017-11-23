@@ -1,5 +1,4 @@
 {
-  "plugins": ["../../../lib"],
-  "presets": ["react"],
-  "plugins": ["external-helpers", "transform-react-inline-elements"]
+  "plugins": ["external-helpers", "../../../lib", "transform-react-inline-elements"],
+  "presets": ["react"]
 }

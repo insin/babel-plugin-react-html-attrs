@@ -27,6 +27,19 @@ Then edit your `.babelrc` to include `react-html-attrs`:
 }
 ```
 
+### Plugin Order With transform-react-inline-elements
+
+If you're also using the [transform-react-inline-elements](https://babeljs.io/docs/plugins/transform-react-inline-elements) plugin, react-html-attrs *must* be specified before it in your plugin list:
+
+```json
+{
+  "plugins": [
+    "react-html-attrs",
+    "transform-react-inline-elements"
+  ]
+}
+```
+
 ## ESLint Configuration
 
 If you're using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)'s' [`no-unknown-property` rule](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md), as of v5.2.0 you can configure it to ignore usage of `class` and `for` in your JSX like so:

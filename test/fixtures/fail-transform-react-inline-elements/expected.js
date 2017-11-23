@@ -1,7 +1,7 @@
 babelHelpers.jsx("div", {
   id: "test",
-  className: "test"
+  "class": "test"
 }, void 0, babelHelpers.jsx("label", {
-  htmlFor: "test",
-  className: "test"
+  "for": "test",
+  "class": "test"
 }, void 0, "Test"));
