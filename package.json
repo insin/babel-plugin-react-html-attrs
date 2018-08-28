@@ -10,11 +10,11 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "babel-core": "6.x",
-    "babel-plugin-external-helpers": "6.x",
-    "babel-plugin-transform-react-inline-elements": "6.x",
-    "babel-preset-react": "6.x",
-    "mocha": "4.x"
+    "@babel/core": "7.x",
+    "@babel/plugin-external-helpers": "7.x",
+    "@babel/plugin-transform-react-inline-elements": "7.x",
+    "@babel/preset-react": "7.x",
+    "mocha": "5.x"
   },
   "license": "MIT",
   "repository": {

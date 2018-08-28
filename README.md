@@ -7,14 +7,10 @@ Transforms JSX `class` attributes into `className` and `for` attributes into `ht
 
 ## Installation & Usage
 
-Install the plugin:
+Install the plugin for Babel >= 6:
 
 ```
-# For Babel 6
 npm install --save-dev babel-plugin-react-html-attrs
-
-# For Babel 5
-npm install --save-dev babel-plugin-react-html-attrs@1.0.0
 ```
 
 Then edit your `.babelrc` to include `react-html-attrs`:
@@ -29,13 +25,13 @@ Then edit your `.babelrc` to include `react-html-attrs`:
 
 ### Plugin Order With transform-react-inline-elements
 
-If you're also using the [transform-react-inline-elements](https://babeljs.io/docs/plugins/transform-react-inline-elements) plugin, react-html-attrs *must* be specified before it in your plugin list:
+If you're also using the [transform-react-inline-elements](https://babeljs.io/docs/en/babel-plugin-transform-react-inline-elements/) plugin, react-html-attrs *must* be specified before it in your plugin list:
 
 ```json
 {
   "plugins": [
     "react-html-attrs",
-    "transform-react-inline-elements"
+    "@babel/plugin-transform-react-inline-elements"
   ]
 }
 ```
