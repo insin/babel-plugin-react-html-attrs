@@ -5,4 +5,7 @@ React.createElement("div", {
 }, /*#__PURE__*/React.createElement("label", {
   htmlFor: "test",
   className: "test"
-}, "Test"));
+}, "Test"), /*#__PURE__*/React.createElement(CustomElement, {
+  for: "text",
+  class: "test"
+}));
