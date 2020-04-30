@@ -45,11 +45,9 @@ If you're using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin
 
 <details>
 <summary>Show ESLint config</summary>
-```json
-{
+<pre>{
   "react/no-unknown-property": [2, {"ignore": ​["accept-charset", "accesskey", "allowfullscreen", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "autoplay", "autosave", "cellpadding", "cellspacing", "charset", "class", "classid", "colspan", "contenteditable", "contextmenu", "controlslist", "crossorigin", "datetime", "disablepictureinpicture", "disableremoteplayback", "enctype", "for", "formaction", "formenctype", "formmethod", "formnovalidate", "formtarget", "frameborder", "hreflang", "http-equiv", "inputmode", "itemid", "itemprop", "itemref", "itemscope", "itemtype", "keyparams", "keytype", "marginheight", "marginwidth", "maxlength", "mediagroup", "minlength", "nomodule", "novalidate", "playsinline", "radiogroup", "readonly", "referrerpolicy", "rowspan", "spellcheck", "srcdoc", "srclang", "srcset", "tabindex", "usemap", "accent-height", "alignment-baseline", "arabic-form", "baseline-shift", "cap-height", "clip-path", "clip-rule", "color-interpolation", "color-interpolation-filters", "color-profile", "color-rendering", "dominant-baseline", "enable-background", "fill-opacity", "fill-rule", "flood-color", "flood-opacity", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-weight", "glyph-name", "glyph-orientation-horizontal", "glyph-orientation-vertical", "horiz-adv-x", "horiz-origin-x", "image-rendering", "letter-spacing", "lighting-color", "marker-end", "marker-mid", "marker-start", "overline-position", "overline-thickness", "paint-order", "panose-1", "pointer-events", "rendering-intent", "shape-rendering", "stop-color", "stop-opacity", "strikethrough-position", "strikethrough-thickness", "stroke-dasharray", "stroke-dashoffset", "stroke-linecap", "stroke-linejoin", "stroke-miterlimit", "stroke-opacity", "stroke-width", "text-anchor", "text-decoration", "text-rendering", "underline-position", "underline-thickness", "unicode-bidi", "unicode-range", "units-per-em", "v-alphabetic", "v-hanging", "v-ideographic", "v-mathematical", "vector-effect", "vert-adv-y", "vert-origin-x", "vert-origin-y", "word-spacing", "writing-mode", "x-height", "xlink:actuate", "xlink:arcrole", "xlink:href", "xlink:role", "xlink:show", "xlink:title", "xlink:type", "xml:base", "xml:lang", "xml:space", "xmlns:xlink"]}]
-}
-```
+}</pre>
 </details>
 
 ## Caveats
