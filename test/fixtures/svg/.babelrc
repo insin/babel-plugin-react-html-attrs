@@ -1,0 +1,4 @@
+{
+  "plugins": ["../../../lib"],
+  "presets": [["@babel/preset-react", {"throwIfNamespace": false}]]
+}

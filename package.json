@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-react-html-attrs",
-  "description": "Babel plugin which transforms HTML attributes in JSX to their React equivalents",
+  "description": "Babel plugin which transforms HTML attributes on JSX host elements into React-compatible DOM attributes",
   "version": "2.1.0",
   "main": "lib/index.js",
   "files": [
@@ -14,7 +14,7 @@
     "@babel/plugin-external-helpers": "7.x",
     "@babel/plugin-transform-react-inline-elements": "7.x",
     "@babel/preset-react": "7.x",
-    "mocha": "5.x"
+    "mocha": "7.x"
   },
   "license": "MIT",
   "repository": {

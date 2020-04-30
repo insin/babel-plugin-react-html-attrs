@@ -1,8 +1,8 @@
-var assert = require('assert')
-var fs = require('fs')
-var path = require('path')
+const assert = require('assert')
+const fs = require('fs')
+const path = require('path')
 
-var Babel = require('@babel/core')
+const Babel = require('@babel/core')
 
 function trim(str) {
   return str.replace(/^\s+|\s+$/, '')
@@ -10,14 +10,14 @@ function trim(str) {
 
 describe('Transforms "class" and "for" JSX attributes', function() {
   this.timeout(10000)
-  var fixturesDir = path.join(__dirname, 'fixtures')
+  let fixturesDir = path.join(__dirname, 'fixtures')
   fs.readdirSync(fixturesDir).map(function(caseName) {
     it(caseName, function() {
-      var fixtureDir = path.join(fixturesDir, caseName)
-      var actualPath = path.join(fixtureDir, 'actual.js')
-      var actual = Babel.transformFileSync(actualPath).code
+      let fixtureDir = path.join(fixturesDir, caseName)
+      let actualPath = path.join(fixtureDir, 'actual.js')
+      let actual = Babel.transformFileSync(actualPath).code
 
-      var expected = fs.readFileSync(
+      let expected = fs.readFileSync(
         path.join(fixtureDir, 'expected.js')
       ).toString()
 
