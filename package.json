@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-react-html-attrs",
   "description": "Babel plugin which transforms HTML attributes on JSX host elements into React-compatible DOM attributes",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "main": "lib/index.js",
   "files": [
     "lib"
