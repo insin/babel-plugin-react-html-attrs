@@ -41,7 +41,6 @@
     controlslist="test"
     crossorigin="test"
     disablepictureinpicture={true}
-    disableremoteplayback={true}
     mediagroup="test"
     playsinline={true}
   >
@@ -49,9 +48,11 @@
   </video>
 
   <table cellpadding={2} cellspacing={2}>
-    <tr>
-      <td colspan={2} rowspan={2} />
-    </tr>
+    <tbody>
+      <tr>
+        <td colspan={2} rowspan={2} />
+      </tr>
+    </tbody>
   </table>
 
   <object classid="test" />

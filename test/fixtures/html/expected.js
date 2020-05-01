@@ -37,7 +37,6 @@ React.createElement("div", {
   controlsList: "test",
   crossOrigin: "test",
   disablePictureInPicture: true,
-  disableRemotePlayback: true,
   mediaGroup: "test",
   playsInline: true
 }, /*#__PURE__*/React.createElement("track", {
@@ -45,10 +44,10 @@ React.createElement("div", {
 })), /*#__PURE__*/React.createElement("table", {
   cellPadding: 2,
   cellSpacing: 2
-}, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", {
+}, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", {
   colSpan: 2,
   rowSpan: 2
-}))), /*#__PURE__*/React.createElement("object", {
+})))), /*#__PURE__*/React.createElement("object", {
   classID: "test"
 }), /*#__PURE__*/React.createElement("ins", {
   dateTime: "test"
