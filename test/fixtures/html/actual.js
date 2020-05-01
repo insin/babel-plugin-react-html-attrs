@@ -5,10 +5,10 @@
   </Head>
 
   <iframe
-    allowfullscreen={true}
+    allowfullscreen
     frameborder="0"
-    marginheight={2}
-    marginwidth={2}
+    marginheight="2"
+    marginwidth="2"
     srcdoc="test"
   />
 
@@ -23,15 +23,15 @@
       id="input"
       type="text"
       autofocus
-      maxlength={42}
-      minlength={1}
+      maxlength="42"
+      minlength="1"
       readonly
     />
     <button
       formaction="test"
       formenctype="test"
       formmethod="test"
-      formnovalidate={false}
+      formnovalidate
       formtarget="test"
     />
   </form>
@@ -40,17 +40,17 @@
     autoplay
     controlslist="test"
     crossorigin="test"
-    disablepictureinpicture={true}
+    disablepictureinpicture
     mediagroup="test"
-    playsinline={true}
+    playsinline
   >
     <track srclang="en" />
   </video>
 
-  <table cellpadding={2} cellspacing={2}>
+  <table cellpadding="2" cellspacing="2">
     <tbody>
       <tr>
-        <td colspan={2} rowspan={2} />
+        <td colspan="2" rowspan="2" />
       </tr>
     </tbody>
   </table>
@@ -59,7 +59,7 @@
 
   <ins datetime="test" />
 
-  <img srcset="test" usemap="test" />
+  <img srcset="test" usemap="test" tabindex="-1" />
 
   <a hreflang="test" referrerpolicy="test" />
 
@@ -87,9 +87,9 @@
     itemid="test"
     itemprop="test"
     itemref="test"
-    itemscope={true}
+    itemscope
     itemtype="test"
     spellcheck="test"
-    tabindex={0}
+    tabindex="0"
   />
 </div>

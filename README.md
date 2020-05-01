@@ -5,9 +5,11 @@
 
 Transforms HTML attributes on JSX host elements into React-compatible DOM attributes, such as `class` to `className` and `for` to `htmlFor`, allowing you to copy and paste HTML into your React components without having to manually change attributes to their DOM equivalents.
 
-As of v3.0.0 this transformation **only** applies to host elements (any JSX element with a lowercase tag name).
+Attributes which take `Number` values in React will also be transformed to JSX expressions if their value is numeric, e.g. `<td colspan="2">` will become `<td colSpan={2}>`.
 
-Use `babel-plugin-react-html-attrs@2.1.0` if you want to transform `class` and `for` on all JSX elements.
+**As of v3.0.0 this transformation _only_ applies to host elements (any JSX element with a lowercase tag name).**
+
+**Use `babel-plugin-react-html-attrs@2.1.0` if you just want to transform `class` and `for` in all JSX opening elements.**
 
 ## Installation & Usage
 

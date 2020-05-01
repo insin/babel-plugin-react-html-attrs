@@ -30,7 +30,7 @@ React.createElement("div", {
   formAction: "test",
   formEncType: "test",
   formMethod: "test",
-  formNoValidate: false,
+  formNoValidate: true,
   formTarget: "test"
 })), /*#__PURE__*/React.createElement("video", {
   autoPlay: true,
@@ -53,7 +53,8 @@ React.createElement("div", {
   dateTime: "test"
 }), /*#__PURE__*/React.createElement("img", {
   srcSet: "test",
-  useMap: "test"
+  useMap: "test",
+  tabIndex: -1
 }), /*#__PURE__*/React.createElement("a", {
   hrefLang: "test",
   referrerPolicy: "test"
