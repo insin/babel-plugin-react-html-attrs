@@ -8,7 +8,7 @@ function trim(str) {
   return str.replace(/^\s+|\s+$/, '')
 }
 
-describe('Transforms "class" and "for" JSX attributes', function() {
+describe('Transforms HTML/SVG attribute names on JSX host elements', function() {
   this.timeout(10000)
   let fixturesDir = path.join(__dirname, 'fixtures')
   fs.readdirSync(fixturesDir).map(function(caseName) {
