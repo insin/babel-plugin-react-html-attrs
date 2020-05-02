@@ -3,13 +3,21 @@
 [![Travis][travis-badge]][travis]
 [![npm package][npm-badge]][npm]
 
-Transforms HTML attributes on JSX host elements into React-compatible DOM attributes, such as `class` to `className` and `for` to `htmlFor`, allowing you to copy and paste HTML into your React components without having to manually change attributes to their DOM equivalents.
+**As of v3.0.0 this plugin _only_ transforms host elements (JSX elements with lowercase tag names).**
 
-Attributes which take `Number` values in React will also be transformed to JSX expressions if their value is numeric, e.g. `<td colspan="2">` will become `<td colSpan={2}>`.
+This plugin's goal is to allow you to copy and paste HTML and SVG verbatim into your React components, by:
 
-**As of v3.0.0 this transformation _only_ applies to host elements (any JSX element with a lowercase tag name).**
+- Transforming attribute names into React-compatible DOM attribute names:
 
-**Use `babel-plugin-react-html-attrs@2.1.0` if you just want to transform `class` and `for` in all JSX opening elements.**
+  `<label class="label" for="input">` → `<label className="label" htmlFor="input">`
+
+- Transforming numeric HTML attribute values into numeric [JSX expressions](https://reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx):
+
+  `<td colspan="2">` → `<td colSpan={2}>`
+
+- Removing values from [boolean HTML attributes](https://html.spec.whatwg.org/#boolean-attributes), as "the presence of a boolean attribute on an element represents the true value":
+
+  `<input checked="checked">` → `<input checked>`
 
 ## Installation & Usage
 
@@ -27,7 +35,7 @@ Then edit your `.babelrc` to include `react-html-attrs`:
 }
 ```
 
-## Babel Configuration for Namespaces
+## Babel Configuration for XML Namespaces in JSX
 
 To allow use of XML namespaces in JSX for SVG, you will have to configure the preset or plugin you're using with `{"throwIfNamespace": false}`, e.g.:
 
@@ -36,6 +44,12 @@ To allow use of XML namespaces in JSX for SVG, you will have to configure the pr
   "presets": [["@babel/preset-react", { "throwIfNamespace": false }]]
 }
 ```
+
+## TypeScript Support ⛈
+
+Unfortunately, it doesn't seem to be possible to provide full TypeScript support for JSX which takes advantage of this plugin's transformations, as it's not currently possible to override host element attribute types in the `interface` definitions provided by `@types/react`.
+
+[This Pull Request to DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/44416) is for a `@types/babel-plugin-react-html-attrs` type definition which forks `@types/react` to add support for missing HTML attributes and to allow all numeric and boolean attributes to be strings as per HTML, but even if approved and merged, this will likely break if you try to use it with other type definitions dependent on `@types/react`.
 
 ## ESLint Configuration
 
