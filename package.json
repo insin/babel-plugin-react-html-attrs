@@ -7,18 +7,21 @@
     "lib"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "7.x",
     "@babel/plugin-external-helpers": "7.x",
     "@babel/plugin-transform-react-inline-elements": "7.x",
     "@babel/preset-react": "7.x",
-    "mocha": "7.x"
+    "jest": "25.x"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/insin/babel-plugin-react-html-attrs.git"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
