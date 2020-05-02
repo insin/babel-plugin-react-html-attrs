@@ -23,9 +23,7 @@ Then edit your `.babelrc` to include `react-html-attrs`:
 
 ```json
 {
-  "plugins": [
-    "react-html-attrs"
-  ]
+  "plugins": ["react-html-attrs"]
 }
 ```
 
@@ -35,9 +33,7 @@ To allow use of XML namespaces in JSX for SVG, you will have to configure the pr
 
 ```json
 {
-  "presets": [
-    ["@babel/preset-react", {"throwIfNamespace": false}]
-  ]
+  "presets": [["@babel/preset-react", { "throwIfNamespace": false }]]
 }
 ```
 
@@ -64,6 +60,5 @@ Testing setup cloned from [gaearon/babel-plugin-react-transform](https://github.
 
 [travis-badge]: https://img.shields.io/travis/insin/babel-plugin-react-html-attrs/master.png?style=flat-square
 [travis]: https://travis-ci.org/insin/babel-plugin-react-html-attrs
-
 [npm-badge]: https://img.shields.io/npm/v/babel-plugin-react-html-attrs.png?style=flat-square
 [npm]: https://www.npmjs.org/package/babel-plugin-react-html-attrs
