@@ -3,11 +3,13 @@
 [![Travis][travis-badge]][travis]
 [![npm package][npm-badge]][npm]
 
-**As of v3.0.0 this plugin _only_ transforms host elements (JSX elements with lowercase tag names).**
+**As of v3 this plugin _only_ transforms host elements (JSX elements with lowercase tag names).**
+
+**Stick with `babel-plugin-react-html-attrs@2` if you just want to transform `class` → `className` and `for` → `htmlFor` on _all_ JSX elements.**
 
 This plugin's goal is to allow you to copy and paste HTML and SVG verbatim into your React components, by:
 
-- Transforming attribute names into React-compatible DOM attribute names:
+- Transforming HTML attribute names into React-compatible DOM property names:
 
   `<label class="label" for="input">` → `<label className="label" htmlFor="input">`
 
@@ -27,7 +29,7 @@ Install the plugin for Babel >= 6:
 npm install --save-dev babel-plugin-react-html-attrs
 ```
 
-Then edit your `.babelrc` to include `react-html-attrs`:
+Edit your `.babelrc` to include `react-html-attrs` as a plugin:
 
 ```json
 {
@@ -45,12 +47,6 @@ To allow use of XML namespaces in JSX for SVG, you will have to configure the pr
 }
 ```
 
-## TypeScript Support ⛈
-
-Unfortunately, it doesn't seem to be possible to provide full TypeScript support for JSX which takes advantage of this plugin's transformations, as it's not currently possible to override host element attribute types in the `interface` definitions provided by `@types/react`.
-
-[This Pull Request to DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/44416) is for a `@types/babel-plugin-react-html-attrs` type definition which forks `@types/react` to add support for missing HTML attributes and to allow all numeric and boolean attributes to be strings as per HTML, but even if approved and merged, this will likely break if you try to use it with other type definitions dependent on `@types/react`.
-
 ## ESLint Configuration
 
 If you're using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)'s' [`no-unknown-property` rule](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md), you can configure it to ignore usage of HTML attributes in your JSX like so:
@@ -61,6 +57,12 @@ If you're using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin
   "react/no-unknown-property": [2, {"ignore": ​["accept-charset", "accesskey", "allowfullscreen", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "autoplay", "autosave", "cellpadding", "cellspacing", "charset", "class", "classid", "colspan", "contenteditable", "contextmenu", "controlslist", "crossorigin", "datetime", "disablepictureinpicture", "disableremoteplayback", "enctype", "for", "formaction", "formenctype", "formmethod", "formnovalidate", "formtarget", "frameborder", "hreflang", "http-equiv", "inputmode", "itemid", "itemprop", "itemref", "itemscope", "itemtype", "keyparams", "keytype", "marginheight", "marginwidth", "maxlength", "mediagroup", "minlength", "nomodule", "novalidate", "playsinline", "radiogroup", "readonly", "referrerpolicy", "rowspan", "spellcheck", "srcdoc", "srclang", "srcset", "tabindex", "usemap", "accent-height", "alignment-baseline", "arabic-form", "baseline-shift", "cap-height", "clip-path", "clip-rule", "color-interpolation", "color-interpolation-filters", "color-profile", "color-rendering", "dominant-baseline", "enable-background", "fill-opacity", "fill-rule", "flood-color", "flood-opacity", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-weight", "glyph-name", "glyph-orientation-horizontal", "glyph-orientation-vertical", "horiz-adv-x", "horiz-origin-x", "image-rendering", "letter-spacing", "lighting-color", "marker-end", "marker-mid", "marker-start", "overline-position", "overline-thickness", "paint-order", "panose-1", "pointer-events", "rendering-intent", "shape-rendering", "stop-color", "stop-opacity", "strikethrough-position", "strikethrough-thickness", "stroke-dasharray", "stroke-dashoffset", "stroke-linecap", "stroke-linejoin", "stroke-miterlimit", "stroke-opacity", "stroke-width", "text-anchor", "text-decoration", "text-rendering", "underline-position", "underline-thickness", "unicode-bidi", "unicode-range", "units-per-em", "v-alphabetic", "v-hanging", "v-ideographic", "v-mathematical", "vector-effect", "vert-adv-y", "vert-origin-x", "vert-origin-y", "word-spacing", "writing-mode", "x-height", "xlink:actuate", "xlink:arcrole", "xlink:href", "xlink:role", "xlink:show", "xlink:title", "xlink:type", "xml:base", "xml:lang", "xml:space", "xmlns:xlink"]}]
 }</pre>
 </details>
+
+## TypeScript Support ⛈
+
+Unfortunately, it doesn't seem to be possible to provide full TypeScript support for JSX which takes advantage of this plugin's transformations, as it's not currently possible to override host element attribute types in the `interface` definitions provided by `@types/react`.
+
+[This Pull Request to DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/44416) is for a `@types/babel-plugin-react-html-attrs` type definition which forks `@types/react` to add support for missing HTML attributes and to allow all numeric and boolean attributes to be strings as per HTML, but even if approved and merged, this will likely break if you try to use it with other type definitions dependent on `@types/react`.
 
 ## Caveats
 
