@@ -64,6 +64,10 @@ Unfortunately, it doesn't seem to be possible to provide full TypeScript support
 
 [This Pull Request to DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/44416) is for a `@types/babel-plugin-react-html-attrs` type definition which forks `@types/react` to add support for missing HTML attributes and to allow all numeric and boolean attributes to be strings as per HTML, but even if approved and merged, this will likely break if you try to use it with other type definitions dependent on `@types/react`.
 
+In the meantime, here's a partial type definition file (for HTML attributes whose name doesn't match their DOM property name, including the all-important `class` and `for`) you can drop into your `typings/` when using this plugin:
+
+- [`babel-plugin-react-html-attrs-partial.d.ts`](typings/babel-plugin-react-html-attrs-partial.d.ts)
+
 ## Caveats
 
 Read [facebook/react#4433](https://github.com/facebook/react/issues/4433) for the reasoning behind why React treats these attributes the way it does and the potential gotchas which await you if you use this plugin (an old version of the JSX transformer used to perform a similar transformation).
