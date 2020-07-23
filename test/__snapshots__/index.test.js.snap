@@ -26,7 +26,7 @@ React.createElement(\\"div\\", {
 }, \\"Test\\"), /*#__PURE__*/React.createElement(CustomElement, {
   for: \\"text\\",
   class: \\"test\\"
-}));"
+}), /*#__PURE__*/React.createElement(\\"div\\", attrs));"
 `;
 
 exports[`babel-plugin-react-html-attrs html 1`] = `
